@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@keyframes glow {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.status-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-left: 10px; /* Adjust spacing as needed */
+  vertical-align: middle; /* Aligns dot nicely with button text */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.status-dot-disabled {
+  background-color: #cccccc; /* Grey */
+  box-shadow: 0 0 6px 1px #aaaaaa; /* Soft grey glow */
+  /* No animation for disabled state */
+}
+
+.status-dot-enabled {
+  background-color: #4caf50; /* Green */
+  box-shadow: 0 0 8px 2px #76ff03; /* Bright green glow */
+  animation: glow 3s infinite ease-in-out;
+}
+
+.status-dot-error {
+  background-color: #f44336; /* Red */
+  box-shadow: 0 0 8px 2px #ff5252; /* Bright red glow */
+  animation: glow 3s infinite ease-in-out;
+}

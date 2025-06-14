@@ -12,14 +12,32 @@
   },
   "license": "MIT",
   "dependencies": {
-    "solid-js": "^1.9.3",
+    "@solid-primitives/deep": "^0.3.2",
     "@tauri-apps/api": "^2",
-    "@tauri-apps/plugin-opener": "^2"
+    "@tauri-apps/plugin-dialog": "~2",
+    "@tauri-apps/plugin-log": "~2",
+    "@tauri-apps/plugin-opener": "^2",
+    "@tauri-apps/plugin-store": "~2",
+    "debounce": "^2.2.0",
+    "solid-js": "^1.9.3",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.1.10",
+    "@tauri-apps/cli": "^2",
+    "daisyui": "^5.0.43",
+    "tailwindcss": "^4.1.10",
     "typescript": "~5.6.2",
     "vite": "^6.0.3",
-    "vite-plugin-solid": "^2.11.0",
-    "@tauri-apps/cli": "^2"
+    "vite-plugin-solid": "^2.11.0"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "esbuild"
+    ],
+    "onlyBuiltDependencies": [
+      "@tailwindcss/oxide"
+    ]
   }
 }
