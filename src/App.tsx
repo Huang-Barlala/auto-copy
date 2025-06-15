@@ -24,7 +24,7 @@ type ToastMessage = {
 
 const detach = await attachConsole();
 const store = await Store.load("store.json");
-detach();
+// detach();
 
 function App() {
   // --- 状态管理 ---
@@ -43,6 +43,22 @@ function App() {
       const oldConf = await store.get<CopyConfiguration[]>("copyConfs");
       if (oldConf && Array.isArray(oldConf)) {
         setCopyConfs(oldConf);
+        for (const conf of oldConf) {
+          // 如果配置已启用，尝试重新启动监视
+          if (conf.enable) {
+            try {
+              await invoke("watch", {
+                id: conf.id,
+                from: conf.from,
+                to: conf.to,
+                copyType: conf.type,
+              });
+            } catch (error) {
+              setCopyConfs((c) => c.id === conf.id, "enable", false); // 禁用此配置
+              setCopyConfs((c) => c.id === conf.id, "error", String(error));
+            }
+          }
+        }
       }
     } catch (error) {
       console.error("从 store 加载配置失败:", error);
@@ -149,15 +165,22 @@ function App() {
    * 切换配置的 'enable' 状态
    * @param {number} index - 要切换的配置索引
    */
-  function toggleEnable(index: number) {
+  async function toggleEnable(index: number) {
     setCopyConfs(index, "enable", (prev) => !prev);
 
     if (copyConfs[index].enable) {
-      invoke("watch", {
-        id: copyConfs[index].id,
-        path: copyConfs[index].from,
-        copyType: copyConfs[index].type,
-      });
+      try {
+        await invoke("watch", {
+          id: copyConfs[index].id,
+          from: copyConfs[index].from,
+          to: copyConfs[index].to,
+          copyType: copyConfs[index].type,
+        });
+      } catch (error) {
+        setCopyConfs(index, "enable", false);
+        setCopyConfs(index, "error", String(error));
+        showToast(`启动失败: ${error}`, "error");
+      }
     } else {
       invoke("stop_watching", {
         id: copyConfs[index].id,

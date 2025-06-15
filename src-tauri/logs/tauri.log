@@ -1,0 +1,16 @@
+[2025-06-14][17:09:58][auto_copy_lib][INFO] 路径 "D:\\code\\rust\\test\\from" 的事件处理循环已启动。
+[2025-06-14][17:10:09][auto_copy_lib][INFO] 路径 "D:\\code\\rust\\test\\from" 的事件处理循环已启动。
+[2025-06-14][17:13:15][auto_copy_lib][INFO] 路径 "D:\\code\\rust\\test\\from" 的事件处理循环已启动。
+[2025-06-14][17:17:06][auto_copy_lib][INFO] 路径 "D:\\code\\rust\\test\\from" 的事件处理循环已启动。
+[2025-06-14][17:19:37][auto_copy_lib][INFO] 路径 "D:\\code\\rust\\test\\from" 的事件处理循环已启动。
+[2025-06-14][17:22:27][auto_copy_lib][INFO] 路径 "D:\\code\\rust\\test\\from" 的事件处理循环已启动。
+[2025-06-14][17:23:13][auto_copy_lib][INFO] 路径 "D:\\code\\rust\\test\\from" 的事件处理循环已启动。
+[2025-06-14][17:32:17][tao::platform_impl::platform::keyboard][TRACE] Received a CHAR message but no `event_info` was available. The message is probably IME, returning.
+[2025-06-14][17:32:17][auto_copy_lib][INFO] 路径 "D:\\code\\rust\\test\\from" 的事件处理循环已启动。
+[2025-06-14][17:34:51][auto_copy_lib][INFO] 路径 "D:\\code\\rust\\test\\from" 的事件处理循环已启动。
+[2025-06-14][17:35:21][auto_copy_lib][INFO] 路径 "D:\\code\\rust\\test\\from" 的事件处理循环已启动。
+[2025-06-14][17:35:50][notify::windows][TRACE] Event: path = `D:\code\rust\test\from\新建 文本文档.txt`, action = 1
+[2025-06-14][17:35:50][auto_copy_lib::file_processor_copy][INFO] 已成功复制文件: "D:\\code\\rust\\test\\from\\新建 文本文档.txt" 到 "D:\\code\\rust\\test\\to\\新建 文本文档.txt"
+[2025-06-14][17:35:56][notify::windows][TRACE] Event: path = `D:\code\rust\test\from\新建 文本文档 (2).txt`, action = 1
+[2025-06-14][17:35:56][auto_copy_lib::file_processor_copy][INFO] 已成功复制文件: "D:\\code\\rust\\test\\from\\新建 文本文档 (2).txt" 到 "D:\\code\\rust\\test\\to\\新建 文本文档 (2).txt"
+[2025-06-14][17:41:36][auto_copy_lib][INFO] 路径 "D:\\code\\rust\\test\\from" 的事件处理循环已启动。

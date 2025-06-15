@@ -1,0 +1,10 @@
+[2025-06-14][13:30:29][auto_copy_lib][INFO] 路径 "D:\\code\\rust\\test\\from" 的事件处理循环已启动。
+[2025-06-14][13:30:30][auto_copy_lib][INFO] 已成功停止对id '01976dda-0dda-7684-a377-449fd75be523' 的监视。
+[2025-06-14][13:30:30][auto_copy_lib][INFO] 路径 "D:\\code\\rust\\test\\from" 的事件处理循环已停止。
+[2025-06-14][13:30:41][auto_copy_lib][INFO] 路径 "D:\\code\\rust\\test\\from" 的事件处理循环已启动。
+[2025-06-14][13:30:45][notify::windows][TRACE] Event: path = `D:\code\rust\test\from\新建 文本文档 (3).txt`, action = 1
+[2025-06-14][13:39:40][auto_copy_lib][INFO] 路径 "D:\\code\\rust\\test\\from" 的事件处理循环已启动。
+[2025-06-14][13:39:50][notify::windows][TRACE] Event: path = `D:\code\rust\test\from\新建 文本文档 (3).txt`, action = 2
+[2025-06-14][13:39:50][auto_copy_lib::file_processor][INFO] 未处理的事件类型: Remove(Any)
+[2025-06-14][13:40:08][notify::windows][TRACE] Event: path = `D:\code\rust\test\from\新建 文本文档 (3).txt`, action = 1
+[2025-06-14][13:40:08][auto_copy_lib::file_processor][INFO] 创建了任意类型的文件或目录: "D:\\code\\rust\\test\\from\\新建 文本文档 (3).txt"
