@@ -99,6 +99,14 @@ async fn start_watching_path(
     if !to_path.exists() {
         return Err(anyhow!("目标路径 '{}' 不存在。请确保路径正确。", to));
     }
+    // 检查目标路径是否是源路径的子目录
+    if to_path.starts_with(&from_path) {
+        return Err(anyhow!(
+            "目标路径 '{}' 不能是源路径 '{}' 的子目录。",
+            &to,
+            &from
+        ));
+    }
 
     let (mut watcher, mut rx) = setup_watcher_channel()?;
 
@@ -178,6 +186,7 @@ pub fn run() {
                         }
                     }
                 })
+                .tooltip("auto-copy运行中,点击显示主窗口")
                 .build(app)?;
             Ok(())
         })

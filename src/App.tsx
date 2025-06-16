@@ -167,7 +167,7 @@ function App() {
    */
   async function toggleEnable(index: number) {
     setCopyConfs(index, "enable", (prev) => !prev);
-
+    setCopyConfs(index, "error", ""); // 清除错误信息
     if (copyConfs[index].enable) {
       try {
         await invoke("watch", {
